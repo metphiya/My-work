@@ -17,29 +17,36 @@
     .nav-item { margin: 8px 0 !important; }
     .nav-link { display: inline-block; width: auto; min-width: 150px; }
 
-    /* สไตล์ตัวอักษรสีแดง */
-    .text-custom-red {
-      color: #dc3545;
+    /* ปรับตัวอักษรทั้งหมดในหน้าให้เป็นสีแดง */
+    .content-grow h2, 
+    .content-grow th, 
+    .content-grow td,
+    .btn-back-link {
+      color: #dc3545 !important; 
       font-weight: bold;
-      font-size: 1.5rem;
     }
 
-    /* สไตล์ตัวเลข: ตัวสีขาว พื้นหลังเหลือง */
+    /* สไตล์ตัวเลข: ตัวสีดำ พื้นหลังเหลือง */
     .price-badge {
-      background-color: #ffc107; /* สีเหลือง Bootstrap warning */
-      color: white;
-      padding: 5px 15px;
-      border-radius: 10px;
+      background-color: #ffc107; /* สีเหลือง */
+      color: #000000; /* ตัวเลขสีดำ */
+      padding: 8px 20px;
+      border-radius: 50px; 
       font-weight: bold;
       display: inline-block;
-      min-width: 80px;
+      min-width: 95px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
     }
 
+    /* ตารางแบบโปร่งใส ไม่มีเส้นขอบ */
     .table {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 15px;
-      overflow: hidden;
+      background-color: transparent !important;
+      margin-top: 20px;
+    }
+    .table td, .table th {
+      border: none !important;
+      padding: 15px 5px;
     }
 
     footer {
@@ -71,45 +78,47 @@
     </div>
   </nav>
 
-  <div class="container mt-5 mb-5">
-    <h2 class="text-danger fw-bold text-center mb-4">ตารางราคาพิซซ่า</h2>
+  <div class="container mt-5 mb-5 text-center">
+    <h3 class="mb-5" style="font-size: 2.2rem; text-decoration: underline;">รายการราคาพิซซ่า</h3>
     
-    <div class="table-responsive">
-      <table class="table table-borderless align-middle text-center">
-        <thead>
-          <tr class="text-custom-red">
-            <th>ไซส์</th>
-            <th>ราคาปกติ</th>
-            <th>เพิ่มชีส</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-custom-red">เล็ก</td>
-            <td><span class="price-badge">69.</span></td>
-            <td><span class="price-badge">89.</span></td>
-          </tr>
-          <tr>
-            <td class="text-custom-red">กลาง</td>
-            <td><span class="price-badge">89.</span></td>
-            <td><span class="price-badge">119.</span></td>
-          </tr>
-          <tr>
-            <td class="text-custom-red">ใหญ่</td>
-            <td><span class="price-badge">139.</span></td>
-            <td><span class="price-badge">179.</span></td>
-          </tr>
-          <tr>
-            <td class="text-custom-red">จัมโบ้</td>
-            <td><span class="price-badge">159.</span></td>
-            <td><span class="price-badge">199.</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th style="font-size: 1.5rem;">ไซส์</th>
+              <th style="font-size: 1.5rem;">ราคาปกติ</th>
+              <th style="font-size: 1.5rem;">เพิ่มชีส</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size: 1.3rem;">เล็ก</td>
+              <td><span class="price-badge">69.-</span></td>
+              <td><span class="price-badge">89.-</span></td>
+            </tr>
+            <tr>
+              <td style="font-size: 1.3rem;">กลาง</td>
+              <td><span class="price-badge">89.-</span></td>
+              <td><span class="price-badge">119.-</span></td>
+            </tr>
+            <tr>
+              <td style="font-size: 1.3rem;">ใหญ่</td>
+              <td><span class="price-badge">139.-</span></td>
+              <td><span class="price-badge">179.-</span></td>
+            </tr>
+            <tr>
+              <td style="font-size: 1.3rem;">จัมโบ้</td>
+              <td><span class="price-badge">159.-</span></td>
+              <td><span class="price-badge">199.-</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="text-center mt-5">
-      <a href="index.html" class="btn btn-outline-danger rounded-pill px-4">
+    <div class="mt-5">
+      <a href="index.html" class="btn btn-outline-danger rounded-pill px-5 fw-bold btn-back-link">
         ← กลับหน้าหลัก
       </a>
     </div>
